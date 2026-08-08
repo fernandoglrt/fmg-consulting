@@ -1,0 +1,45 @@
+{
+  "site": "FMG Consulting",
+  "origem": "https://qlicbr.wixsite.com/meusite-1",
+  "dominio_pretendido": "fmgcons.com.br",
+  "idioma": "pt-BR",
+  "cms_origem": "Wix",
+  "paginas": [
+    { "slug": "/", "titulo": "Consultoria Organizacional | FMG Consulting | Brasil", "arquivo": "content/home.md", "status": "completo" },
+    { "slug": "/sobre", "titulo": "Sobre | FMG Consulting", "arquivo": "content/sobre.md", "status": "completo" },
+    { "slug": "/clientes", "titulo": "Clientes | FMG Consulting", "arquivo": "content/clientes.md", "status": "completo" },
+    { "slug": "/servicos", "titulo": "Serviços | FMG Consulting", "arquivo": "content/servicos.md", "status": "completo" },
+    { "slug": "/lgpd", "titulo": "LGPD | FMG Consulting", "arquivo": "content/lgpd.md", "status": "INCOMPLETO" },
+    { "slug": "/passos-lgpd", "titulo": "Passos LGPD | FMGCONS", "arquivo": "content/passos-lgpd.md", "status": "PARCIAL" },
+    { "slug": "/blog", "titulo": "Blog | FMG Consulting", "arquivo": "content/blog/_index.md", "status": "completo" },
+    { "slug": "/contato", "titulo": "Contato | FMG Consulting", "arquivo": "content/contato.md", "status": "completo" },
+    { "slug": "/politica-de-privacidade", "titulo": "Política de Privacidade | FMGCONS", "arquivo": "content/politica-de-privacidade.md", "status": "completo" }
+  ],
+  "posts": [
+    { "slug": "/blog/hedge-de-convivio", "titulo": "Hedge de Convívio", "data": "2021-03-17", "arquivo": "content/blog/hedge-de-convivio.md" },
+    { "slug": "/blog/futurize-se-ontem", "titulo": "Futurize-se Ontem!", "data": "2021-01-25", "arquivo": "content/blog/futurize-se-ontem.md" },
+    { "slug": "/blog/o-ser-estrategico", "titulo": "O \"Ser Estratégico\"", "data": "2021-01-20", "arquivo": "content/blog/o-ser-estrategico.md" },
+    { "slug": "/blog/lgpd-nas-relacoes-de-trabalho", "titulo": "A Lei Geral de Proteção de Dados nas Relações de Trabalho", "data": "2020-12-14", "arquivo": "content/blog/lgpd-nas-relacoes-de-trabalho.md" }
+  ],
+  "navegacao": {
+    "header": [
+      { "label": "Home", "href": "/" },
+      { "label": "Sobre", "href": "/sobre", "filhos": [{ "label": "Clientes", "href": "/clientes" }] },
+      { "label": "Serviços", "href": "/servicos" },
+      { "label": "Materiais", "href": null, "filhos": [
+        { "label": "LGPD", "href": "/lgpd" },
+        { "label": "Passos LGPD", "href": "/passos-lgpd" }
+      ]},
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contato", "href": "/contato" }
+    ],
+    "footer": [{ "label": "Política de privacidade", "href": "/politica-de-privacidade" }],
+    "flutuante": { "tipo": "whatsapp", "href": "https://api.whatsapp.com/send?phone=555134302673&text=Ol%C3%A1%20" }
+  },
+  "contato": {
+    "telefone": "(51) 3430-2673",
+    "whatsapp": "555134302673",
+    "email": "fmgcons@fmgcons.com",
+    "dpo": "dpo@fmgcons.com"
+  }
+}
