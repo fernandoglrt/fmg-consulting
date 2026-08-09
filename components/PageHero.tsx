@@ -44,7 +44,7 @@ export function PageHero({
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 pb-14 sm:px-8 sm:pb-20">
         <Reveal>
           {eyebrow && (
-            <p className="eyebrow mb-4 text-[13px] font-semibold uppercase text-accent-soft">{eyebrow}</p>
+            <p className="eyebrow mb-4 text-[19.5px] font-semibold uppercase text-accent-soft">{eyebrow}</p>
           )}
           <h1 className="display text-balance max-w-3xl text-[clamp(2.5rem,6vw,4.75rem)] font-semibold text-white">
             {title}
