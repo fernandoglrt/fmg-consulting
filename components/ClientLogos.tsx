@@ -42,15 +42,15 @@ export function ClientLogos({ marquee = true }: { marquee?: boolean }) {
 
   return (
     <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-      <div className="flex w-max animate-marquee items-center gap-14 py-4 hover:[animation-play-state:paused]">
+      <div className="flex w-max animate-marquee items-center gap-16 py-4 hover:[animation-play-state:paused]">
         {doubled.map((c, i) => (
           <Image
             key={`${c.file}-${i}`}
             src={`/images/${c.file}`}
             alt={c.name}
-            width={120}
-            height={60}
-            className="h-10 w-auto shrink-0 object-contain opacity-60 grayscale transition-opacity hover:opacity-100"
+            width={170}
+            height={85}
+            className="h-14 w-auto shrink-0 object-contain"
           />
         ))}
       </div>
