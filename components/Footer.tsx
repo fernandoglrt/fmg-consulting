@@ -1,5 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { LinkedinIcon, InstagramIcon, YoutubeIcon } from '@/components/icons/SocialIcons';
+
+const SOCIAL = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/fl%C3%A1vio-goulart-2a345ab7/', Icon: LinkedinIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/consultoriafm/', Icon: InstagramIcon },
+  { label: 'YouTube', href: 'https://www.youtube.com/channel/UCnX7dpO6_dklnQaRP2bZEpA', Icon: YoutubeIcon },
+];
 
 export function Footer() {
   return (
@@ -11,6 +18,20 @@ export function Footer() {
             Consultoria organizacional de alta performance — estratégia, execução, pessoas e
             governança para o seu negócio.
           </p>
+          <div className="mt-5 flex items-center gap-2">
+            {SOCIAL.map(({ label, href, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink/50 transition-colors hover:border-accent hover:text-accent"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div>
@@ -27,8 +48,8 @@ export function Footer() {
         <div>
           <p className="eyebrow text-[12px] font-semibold uppercase text-ink/35">Contato</p>
           <ul className="mt-4 space-y-2.5 text-[14px] text-ink/65">
-            <li><a href="tel:+555134302673" className="transition-colors hover:text-accent">(51) 3430-2673</a></li>
-            <li><a href="mailto:fmgcons@fmgcons.com" className="transition-colors hover:text-accent">fmgcons@fmgcons.com</a></li>
+            <li><a href="tel:+5551981898705" className="transition-colors hover:text-accent">+55 (51) 98189-8705</a></li>
+            <li><a href="mailto:contato@fmgcons.com.br" className="transition-colors hover:text-accent">contato@fmgcons.com.br</a></li>
             <li><Link href="/politica-de-privacidade" className="transition-colors hover:text-accent">Política de privacidade</Link></li>
           </ul>
         </div>

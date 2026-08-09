@@ -43,25 +43,25 @@ function ShieldIcon(props: React.SVGProps<SVGSVGElement>) {
 
 const CONTACTS = [
   {
-    label: 'Telefone',
-    value: '(51) 3430-2673',
-    copyValue: '(51) 3430-2673',
-    href: 'tel:+555134302673',
+    label: 'Telefone / WhatsApp',
+    value: '+55 (51) 98189-8705',
+    copyValue: '+55 (51) 98189-8705',
+    href: 'tel:+5551981898705',
     Icon: PhoneIcon,
   },
   {
     label: 'WhatsApp',
-    value: '(51) 3430-2673',
-    copyValue: '(51) 3430-2673',
-    href: 'https://api.whatsapp.com/send?phone=555134302673&text=Ol%C3%A1%20',
+    value: '+55 (51) 98189-8705',
+    copyValue: '+55 (51) 98189-8705',
+    href: 'https://wa.me/5551981898705',
     Icon: WhatsappIcon,
     external: true,
   },
   {
     label: 'E-mail',
-    value: 'fmgcons@fmgcons.com',
-    copyValue: 'fmgcons@fmgcons.com',
-    href: 'mailto:fmgcons@fmgcons.com',
+    value: 'contato@fmgcons.com.br',
+    copyValue: 'contato@fmgcons.com.br',
+    href: 'mailto:contato@fmgcons.com.br',
     Icon: MailIcon,
   },
   {
@@ -71,6 +71,15 @@ const CONTACTS = [
     href: 'mailto:dpo@fmgcons.com',
     Icon: ShieldIcon,
   },
+];
+
+const CANAIS = [
+  { label: 'LinkedIn — Flávio Goulart', href: 'https://www.linkedin.com/in/fl%C3%A1vio-goulart-2a345ab7/' },
+  { label: 'Instagram — Flávio Goulart', href: 'https://www.instagram.com/flaviofmg/' },
+  { label: 'Instagram — FMG Consulting', href: 'https://www.instagram.com/consultoriafm/' },
+  { label: 'YouTube — FMG Consulting', href: 'https://www.youtube.com/channel/UCnX7dpO6_dklnQaRP2bZEpA' },
+  { label: 'Plataforma Unio Sebrae', href: 'https://plataforma.uniosebrae.com.br/p/fmg-consulting/' },
+  { label: 'WhatsApp Business', href: 'https://wa.me/5551981898705' },
 ];
 
 export default function ContatoPage() {
@@ -85,38 +94,65 @@ export default function ContatoPage() {
       />
 
       <section className="mx-auto grid max-w-6xl gap-14 px-5 py-24 sm:px-8 sm:py-28 md:grid-cols-[1fr_1.3fr]">
-        <Reveal>
-          <div>
-            <p className="eyebrow text-[13px] font-semibold uppercase text-accent">Fale conosco</p>
-            <ul className="mt-6 flex flex-col gap-3">
-              {CONTACTS.map(({ label, value, copyValue, href, Icon, external }) => (
-                <li key={label}>
-                  <div className="group relative flex items-center gap-4 rounded-2xl border border-line bg-white p-4 shadow-soft transition-shadow duration-300 hover:shadow-lifted">
-                    <a
-                      href={href}
-                      target={external ? '_blank' : undefined}
-                      rel={external ? 'noopener noreferrer' : undefined}
-                      aria-label={`${label}: ${value}`}
-                      className="absolute inset-0 rounded-2xl"
-                    />
-                    <span className="pointer-events-none flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent-deep text-white">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <span className="pointer-events-none">
-                      <span className="block text-[12px] uppercase tracking-wide text-ink/40">{label}</span>
-                      <span className="block text-[15px] font-medium text-ink transition-colors group-hover:text-accent">
-                        {value}
+        <div className="flex flex-col gap-10">
+          <Reveal>
+            <div>
+              <p className="eyebrow text-[13px] font-semibold uppercase text-accent">Fale conosco</p>
+              <ul className="mt-6 flex flex-col gap-3">
+                {CONTACTS.map(({ label, value, copyValue, href, Icon, external }) => (
+                  <li key={label}>
+                    <div className="group relative flex items-center gap-4 rounded-2xl border border-line bg-white p-4 shadow-soft transition-shadow duration-300 hover:shadow-lifted">
+                      <a
+                        href={href}
+                        target={external ? '_blank' : undefined}
+                        rel={external ? 'noopener noreferrer' : undefined}
+                        aria-label={`${label}: ${value}`}
+                        className="absolute inset-0 rounded-2xl"
+                      />
+                      <span className="pointer-events-none flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent-deep text-white">
+                        <Icon className="h-5 w-5" />
                       </span>
-                    </span>
-                    <div className="relative z-10 ml-auto">
-                      <CopyButton value={copyValue} />
+                      <span className="pointer-events-none">
+                        <span className="block text-[12px] uppercase tracking-wide text-ink/40">{label}</span>
+                        <span className="block text-[15px] font-medium text-ink transition-colors group-hover:text-accent">
+                          {value}
+                        </span>
+                      </span>
+                      <div className="relative z-10 ml-auto">
+                        <CopyButton value={copyValue} />
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Reveal>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.06}>
+            <div>
+              <p className="eyebrow text-[13px] font-semibold uppercase text-accent">Canais &amp; mídias FMG</p>
+              <div className="mt-6 overflow-hidden rounded-3xl border border-line bg-white shadow-soft">
+                {CANAIS.map((item) => (
+                  <a
+                    key={item.href + item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between gap-4 border-b border-line px-5 py-4 text-[14.5px] font-medium text-ink transition-colors last:border-b-0 hover:bg-tint hover:text-accent"
+                  >
+                    {item.label}
+                    <span
+                      aria-hidden
+                      className="text-ink/25 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent"
+                    >
+                      →
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal delay={0.06}>
           <ContactForm />

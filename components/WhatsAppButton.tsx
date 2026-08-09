@@ -2,7 +2,8 @@
 
 import { motion, useReducedMotion } from 'framer-motion';
 
-const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=555134302673&text=Ol%C3%A1%20';
+const WHATSAPP_URL =
+  'https://wa.me/5551981898705?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20FMG%20Consulting%20e%20gostaria%20de%20falar%20com%20o%20Fl%C3%A1vio.';
 
 export function WhatsAppButton() {
   const reduced = useReducedMotion();
